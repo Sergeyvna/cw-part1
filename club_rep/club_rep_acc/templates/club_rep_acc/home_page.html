@@ -7,17 +7,23 @@
 <div class="row">
     <div class="col-md">
         <br>
-        <h2 style="text-align:center">Films Booking</h2>
-        <hr>
+        <h2 style="text-align:center">Films</h2>
         <div class="car card-body">
-            <a class="btn btn-secondary btn-sm btn-block"  href="">Find Films</a>
+
             <table class="table table-sm">
                 <tr>
                     <th>Film Name</th>
                     <th>Film Length</th>
-                    <th>Ticket Amount</th>
                     <th>Price</th>
                 </tr>
+
+                {% for i in films %}
+                    <tr>
+                        <td>{{i.film_name}}</td>
+                        <td>{{i.film_length}}</td>
+                        <td>{{i.ticket_price}}</td>
+                    </tr>
+                {% endfor %}
             </table>
 
         </div>
